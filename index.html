@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جمعية حديقة المعرفة للتنمية والتواصل</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>جمعية حديقة المعرفة للتنمية والتواصل</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#">عن الجمعية</a></li>
+            <li><a href="#">الأنشطة</a></li>
+            <li><a href="#">اتصل بنا</a></li>
+        </ul>
+    </nav>
+
+    <section class="quran-reader">
+        <h2>استمع إلى القرآن الكريم</h2>
+        <iframe src="https://www.le-coran.com/arabe/s-1-0.html" width="100%" height="300"></iframe>
+    </section>
+
+    <footer>
+        <p>taoufik&copy; 2025</p>
+    </footer>
+</body>
+</html>
+<style>
+    body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://wallpaperaccess.com/full/380564.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: gold;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.quran-reader {
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    width: 80%;
+    border-radius: 10px;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    margin-top: 50px;
+}
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    let text = document.getElementById("moving-text");
+    let position = -100;
+    let direction = 1;
+
+    function moveText() {
+        position += direction;
+        text.style.left = position + "%";
+
+        if (position > 100) {
+            position = -100;
+        }
+
+        requestAnimationFrame(moveText);
+    }
+
+    moveText();
+});
+</script>
